@@ -121,5 +121,5 @@ app.delete("/api/v1/users/:id", async (req, res) => {
 });
 
 app.listen(process.env.port, process.env.IP, () => {
-  console.log(`App is running on port: ${port}`);
+  console.log(`App is running`);
 });
