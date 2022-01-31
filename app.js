@@ -2,7 +2,7 @@ const express = require("express");
 const User = require("./models/userModel");
 const mongoose = require("mongoose");
 const app = express();
-const port = 3000 || process.env.port;
+// const port = 3000 || process.env.port;
 
 app.use(express.json());
 
@@ -120,6 +120,6 @@ app.delete("/api/v1/users/:id", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT, process.env.IP, () => {
   console.log(`App is running on port: ${port}`);
 });
