@@ -120,6 +120,12 @@ app.delete("/api/v1/users/:id", async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT, process.env.IP, () => {
-  console.log(`App is running on port${process.env.PORT}`);
+app.all("*", (req, res) => {
+  res.send(`Can't find ${req.originalUrl} on this server`);
+});
+
+const port = process.env.PORT; //process.env.PORT=> port for heroku
+
+app.listen(port, process.env.IP, () => {
+  console.log(`App is running on port: ${port}`);
 });
