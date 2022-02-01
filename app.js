@@ -124,7 +124,7 @@ app.all("*", (req, res) => {
   res.send(`Can't find ${req.originalUrl} on this server`);
 });
 
-const port = process.env.PORT; //process.env.PORT=> port for heroku
+const port = 3000; //process.env.PORT=> port for heroku
 
 app.listen(port, process.env.IP, () => {
   console.log(`App is running on port: ${port}`);
