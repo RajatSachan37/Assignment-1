@@ -134,5 +134,5 @@ app.all("*", (req, res) => {
 // const port = 3000; //process.env.PORT=> port for heroku
 
 app.listen(process.env.PORT, process.env.IP, () => {
-  console.log(`App is running on port: ${port}`);
+  console.log(`App is running on port: `);
 });
