@@ -49,6 +49,9 @@ app.get("/api/v1/users", async (req, res) => {
   try {
     const users = await User.find({});
 
+    // object destructuring
+    // all users Api should give only id, name and contact
+
     res.status(200).json({
       status: "success",
       results: users.length,
