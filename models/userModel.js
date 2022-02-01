@@ -15,6 +15,9 @@ const userSchema = new mongoose.Schema({
     type: Number,
     required: [true, "Student's contact number is required"],
   },
+  address: {
+    type: String,
+  },
 });
 
 const User = mongoose.model("User", userSchema);
