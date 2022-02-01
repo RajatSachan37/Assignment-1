@@ -47,7 +47,7 @@ app.post("/api/v1/users", async (req, res) => {
 // ReadAllUsers route
 app.get("/api/v1/users", async (req, res) => {
   try {
-    const users = await User.find({});
+    const users = await User.find({}, "name id contact");
 
     // object destructuring
     // all users Api should give only id, name and contact
@@ -70,8 +70,12 @@ app.get("/api/v1/users", async (req, res) => {
 // GetUser by id Route
 app.get("/api/v1/users/:id", async (req, res) => {
   try {
-    const user = await User.findById(req.params.id);
+    const user = await User.findById(
+      req.params.id,
+      "name contact id email address"
+    );
 
+    //individual user APi should give id, name, contact, email, address
     res.status(200).json({
       status: "success",
       data: {
