@@ -33,6 +33,7 @@ const userSchema = new mongoose.Schema(
 //   virtuals: true,
 // });
 
+// replacing _id with id
 userSchema.set("toJSON", {
   virtuals: true,
   // versionKey: false,
