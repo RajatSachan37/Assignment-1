@@ -9,11 +9,10 @@ app.use("/api/v1/users", userRouter);
 
 // app.use(express.json());
 
-// const DB = mongodb+srv://Rajat:r15r15@cluster0.s8gqz.mongodb.net/natours?retryWrites=true&w=majority;
 
 mongoose
   .connect(
-    "mongodb+srv://Rajat:r15r15@cluster0.s8gqz.mongodb.net/assignment1?retryWrites=true&w=majority"
+    "<INSERT MONGODB CONNECTION STRING HERE>"
   )
   .then(() => {
     console.log("DB connection successful!");
